@@ -66,29 +66,13 @@ public class GameActivity extends AppCompatActivity {
                 player1.getMoves().add(1);
                 btn1.setImageResource(R.drawable.cross);
                     if (checkIfPlayerWins(player1)) {
-                        new AlertDialog.Builder(this)
-                                .setTitle("Congratulations : " + namePlayer1.getText().toString())
-                                .setMessage("You won the game reset ?")
-                                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog, int whichButton) {
-                                        resetAll();
-                                    }
-                                })
-                                .show();
+                       player1Win();
                     }
             } else {
                 player2.getMoves().add(1);
                 btn1.setImageResource(R.drawable.circle);
                     if (checkIfPlayerWins(player2)) {
-                        new AlertDialog.Builder(this)
-                                .setTitle("Congratulations : " + namePlayer2.getText().toString())
-                                .setMessage("You won the game reset ?")
-                                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog, int whichButton) {
-                                        resetAll();
-                                    }
-                                })
-                                .show();
+                       player2Win();
                     }
             }
             btn1.setEnabled(false);
@@ -100,29 +84,13 @@ public class GameActivity extends AppCompatActivity {
                 player1.getMoves().add(2);
                 btn2.setImageResource(R.drawable.cross);
                     if (checkIfPlayerWins(player1)) {
-                        new AlertDialog.Builder(this)
-                                .setTitle("Congratulations : " + namePlayer1.getText().toString())
-                                .setMessage("You won the game reset ?")
-                                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog, int whichButton) {
-                                        resetAll();
-                                    }
-                                })
-                                .show();
+                       player1Win();
                     }
             } else {
                 player2.getMoves().add(2);
                 btn2.setImageResource(R.drawable.circle);
                     if (checkIfPlayerWins(player2)) {
-                        new AlertDialog.Builder(this)
-                                .setTitle("Congratulations : " + namePlayer2.getText().toString())
-                                .setMessage("You won the game reset ?")
-                                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog, int whichButton) {
-                                        resetAll();
-                                    }
-                                })
-                                .show();
+                       player2Win();
                     }
             }
             btn2.setEnabled(false);
@@ -137,29 +105,13 @@ public class GameActivity extends AppCompatActivity {
                 player1.getMoves().add(3);
                 btn3.setImageResource(R.drawable.cross);
                     if (checkIfPlayerWins(player1)) {
-                        new AlertDialog.Builder(this)
-                                .setTitle("Congratulations : " + namePlayer1.getText().toString())
-                                .setMessage("You won the game reset ?")
-                                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog, int whichButton) {
-                                        resetAll();
-                                    }
-                                })
-                                .show();
+                       player1Win();
                     }
             } else {
                 player2.getMoves().add(2);
                 btn3.setImageResource(R.drawable.circle);
                     if (checkIfPlayerWins(player2)) {
-                        new AlertDialog.Builder(this)
-                                .setTitle("Congratulations : " + namePlayer2.getText().toString())
-                                .setMessage("You won the game reset ?")
-                                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog, int whichButton) {
-                                        resetAll();
-                                    }
-                                })
-                                .show();
+                       player2Win();
                     }
             }
             btn3.setEnabled(false);
@@ -174,29 +126,13 @@ public class GameActivity extends AppCompatActivity {
                 player1.getMoves().add(4);
                 btn4.setImageResource(R.drawable.cross);
                     if (checkIfPlayerWins(player1)) {
-                        new AlertDialog.Builder(this)
-                                .setTitle("Congratulations : " + namePlayer1.getText().toString())
-                                .setMessage("You won the game reset ?")
-                                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog, int whichButton) {
-                                        resetAll();
-                                    }
-                                })
-                                .show();
+                       player1Win();
                     }
             } else {
                 player2.getMoves().add(4);
                 btn4.setImageResource(R.drawable.circle);
                     if (checkIfPlayerWins(player2)) {
-                        new AlertDialog.Builder(this)
-                                .setTitle("Congratulations : " + namePlayer2.getText().toString())
-                                .setMessage("You won the game reset ?")
-                                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog, int whichButton) {
-                                        resetAll();
-                                    }
-                                })
-                                .show();
+                       player2Win();
                     }
             }
             btn4.setEnabled(false);
@@ -211,29 +147,13 @@ public class GameActivity extends AppCompatActivity {
                 player1.getMoves().add(5);
                 btn5.setImageResource(R.drawable.cross);
                     if (checkIfPlayerWins(player1)) {
-                        new AlertDialog.Builder(this)
-                                .setTitle("Congratulations : " + namePlayer1.getText().toString())
-                                .setMessage("You won the game reset ?")
-                                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog, int whichButton) {
-                                        resetAll();
-                                    }
-                                })
-                                .show();
+                       player1Win();
                     }
             } else {
                 player2.getMoves().add(5);
                 btn5.setImageResource(R.drawable.circle);
                     if (checkIfPlayerWins(player2)) {
-                        new AlertDialog.Builder(this)
-                                .setTitle("Congratulations : " + namePlayer2.getText().toString())
-                                .setMessage("You won the game reset ?")
-                                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog, int whichButton) {
-                                        resetAll();
-                                    }
-                                })
-                                .show();
+                       player2Win();
                     }
             }
             btn5.setEnabled(false);
@@ -248,29 +168,13 @@ public class GameActivity extends AppCompatActivity {
                 player1.getMoves().add(6);
                 btn6.setImageResource(R.drawable.cross);
                     if (checkIfPlayerWins(player1)) {
-                        new AlertDialog.Builder(this)
-                                .setTitle("Congratulations : " + namePlayer1.getText().toString())
-                                .setMessage("You won the game reset ?")
-                                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog, int whichButton) {
-                                        resetAll();
-                                    }
-                                })
-                                .show();
+                       player1Win();
                     }
             } else {
                 player2.getMoves().add(6);
                 btn6.setImageResource(R.drawable.circle);
                     if (checkIfPlayerWins(player2)) {
-                        new AlertDialog.Builder(this)
-                                .setTitle("Congratulations : " + namePlayer2.getText().toString())
-                                .setMessage("You won the game reset ?")
-                                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog, int whichButton) {
-                                        resetAll();
-                                    }
-                                })
-                                .show();
+                       player2Win();
                     }
             }
             btn6.setEnabled(false);
@@ -285,29 +189,13 @@ public class GameActivity extends AppCompatActivity {
                 player1.getMoves().add(7);
                 btn7.setImageResource(R.drawable.cross);
                     if (checkIfPlayerWins(player1)) {
-                        new AlertDialog.Builder(this)
-                                .setTitle("Congratulations : " + namePlayer1.getText().toString())
-                                .setMessage("You won the game reset ?")
-                                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog, int whichButton) {
-                                        resetAll();
-                                    }
-                                })
-                                .show();
+                       player1Win();
                     }
             } else {
                 player2.getMoves().add(7);
                 btn7.setImageResource(R.drawable.circle);
                     if (checkIfPlayerWins(player2)) {
-                        new AlertDialog.Builder(this)
-                                .setTitle("Congratulations : " + namePlayer2.getText().toString())
-                                .setMessage("You won the game reset ?")
-                                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog, int whichButton) {
-                                        resetAll();
-                                    }
-                                })
-                                .show();
+                       player2Win();
                     }
             }
             btn7.setEnabled(false);
@@ -322,29 +210,13 @@ public class GameActivity extends AppCompatActivity {
                 player1.getMoves().add(8);
                 btn8.setImageResource(R.drawable.cross);
                     if (checkIfPlayerWins(player1)) {
-                        new AlertDialog.Builder(this)
-                                .setTitle("Congratulations : " + namePlayer1.getText().toString())
-                                .setMessage("You won the game reset ?")
-                                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog, int whichButton) {
-                                        resetAll();
-                                    }
-                                })
-                                .show();
+                       player1Win();
                     }
             } else {
                 player2.getMoves().add(8);
                 btn8.setImageResource(R.drawable.circle);
                     if (checkIfPlayerWins(player2)) {
-                        new AlertDialog.Builder(this)
-                                .setTitle("Congratulations : " + namePlayer2.getText().toString())
-                                .setMessage("You won the game reset ?")
-                                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog, int whichButton) {
-                                        resetAll();
-                                    }
-                                })
-                                .show();
+                       player2Win();
                     }
             }
             btn8.setEnabled(false);
@@ -359,35 +231,43 @@ public class GameActivity extends AppCompatActivity {
                 player1.getMoves().add(9);
                 btn9.setImageResource(R.drawable.cross);
                     if (checkIfPlayerWins(player1)) {
-                        new AlertDialog.Builder(this)
-                                .setTitle("Congratulations : " + namePlayer1.getText().toString())
-                                .setMessage("You won the game reset ?")
-                                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog, int whichButton) {
-                                        resetAll();
-                                    }
-                                })
-                                .show();
+                       player1Win();
                     }
             } else {
                 player2.getMoves().add(9);
                 btn9.setImageResource(R.drawable.circle);
                     if (checkIfPlayerWins(player2)) {
-                        new AlertDialog.Builder(this)
-                                .setTitle("Congratulations : " + namePlayer2.getText().toString())
-                                .setMessage("You won the game reset ?")
-                                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog, int whichButton) {
-                                        resetAll();
-                                    }
-                                })
-                                .show();
+                       player2Win();
                     }
             }
             btn9.setEnabled(false);
         });
     }
 
+
+    public void player1Win(){
+        new AlertDialog.Builder(this)
+                .setTitle("Congratulations : " + namePlayer1.getText().toString())
+                .setMessage("You won the game reset ?")
+                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int whichButton) {
+                        resetAll();
+                    }
+                })
+                .show();
+    }
+
+    public void player2Win(){
+        new AlertDialog.Builder(this)
+                .setTitle("Congratulations : " + namePlayer2.getText().toString())
+                .setMessage("You won the game reset ?")
+                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int whichButton) {
+                        resetAll();
+                    }
+                })
+                .show();
+    }
 
 
 
