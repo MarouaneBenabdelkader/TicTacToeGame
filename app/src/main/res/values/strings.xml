@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Tic Tac Toe Game</string>
+    <string name="footer">Think Outside of The Box</string>
+    <string name="playername1">Player 1  </string>
+    <string name="playername2">Player 2  </string>
+    <string name="btnstart">Start </string>
+    <string name="nameply">Name :</string>
+</resources>
