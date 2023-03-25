@@ -3,6 +3,7 @@ package com.estf.tictactoegame;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,21 +11,25 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
+
 
 import com.estf.tictactoegame.models.Player;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class GameActivity extends AppCompatActivity {
     private TextView namePlayer1;
+    private Button backBtn;
     private TextView namePlayer2;
+    private TextView scoreP1;
+    private TextView scoreP2;
     private ImageView btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9;
     private Button resetBtn;
     private int counter = 0;
     private Player player1;
     private Player player2;
+    private int score1 = 0;
+    private int score2 = 0;
     private final int[][] winCases = {
             {1, 2, 3}, {4, 5, 6}, {7, 8, 9},
             {1, 4, 7}, {2, 5, 8}, {3, 6, 9},
@@ -53,12 +58,14 @@ public class GameActivity extends AppCompatActivity {
         btn7 = findViewById(R.id.btn7);
         btn8 = findViewById(R.id.btn8);
         btn9 = findViewById(R.id.btn9);
-        resetBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                resetAll();
-            }
-        });
+        scoreP1 = findViewById(R.id.scoreP1);
+        scoreP2 = findViewById(R.id.scoreP2);
+        backBtn= findViewById(R.id.backBtn);
+
+        backBtn.setOnClickListener(v -> finish());
+
+        resetBtn.setOnClickListener(v -> resetAll());
+
         btn1.setOnClickListener(v -> {
             counter++;
 
@@ -108,7 +115,7 @@ public class GameActivity extends AppCompatActivity {
                        player1Win();
                     }
             } else {
-                player2.getMoves().add(2);
+                player2.getMoves().add(3);
                 btn3.setImageResource(R.drawable.circle);
                     if (checkIfPlayerWins(player2)) {
                        player2Win();
@@ -245,30 +252,42 @@ public class GameActivity extends AppCompatActivity {
     }
 
 
+    @SuppressLint("SetTextI18n")
     public void player1Win(){
+        score1 ++;
+        colorScoreCheck();
+        scoreP1.setText(Integer.toString(score1));
         new AlertDialog.Builder(this)
                 .setTitle("Congratulations : " + namePlayer1.getText().toString())
-                .setMessage("You won the game reset ?")
-                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int whichButton) {
-                        resetAll();
-                    }
-                })
+                .setMessage("You won the game continue ?")
+                .setPositiveButton(android.R.string.ok, (dialog, whichButton) -> resetAll())
                 .show();
     }
 
+    @SuppressLint("SetTextI18n")
     public void player2Win(){
+        score2 ++;
+        colorScoreCheck();
+        scoreP2.setText(Integer.toString(score2));
         new AlertDialog.Builder(this)
                 .setTitle("Congratulations : " + namePlayer2.getText().toString())
-                .setMessage("You won the game reset ?")
-                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int whichButton) {
-                        resetAll();
-                    }
-                })
+                .setMessage("You won the game continue ?")
+                .setPositiveButton(android.R.string.ok, (dialog, whichButton) -> resetAll())
                 .show();
     }
 
+    public void colorScoreCheck(){
+        if( score1 > score2){
+            scoreP1.setBackgroundColor(getResources().getColor(R.color.green));
+            scoreP2.setBackgroundColor(getResources().getColor(R.color.red));
+        }else if(score1 < score2){
+            scoreP2.setBackgroundColor(getResources().getColor(R.color.green));
+            scoreP1.setBackgroundColor(getResources().getColor(R.color.red));
+        }else{
+            scoreP2.setBackgroundColor(getResources().getColor(R.color.purple_500));
+            scoreP1.setBackgroundColor(getResources().getColor(R.color.purple_500));
+        }
+    }
 
 
     public void resetAll() {

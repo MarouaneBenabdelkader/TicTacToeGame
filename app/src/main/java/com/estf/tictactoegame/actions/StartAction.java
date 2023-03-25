@@ -12,9 +12,9 @@ import com.estf.tictactoegame.models.Player;
 import java.util.ArrayList;
 
 public class StartAction implements View.OnClickListener {
-        private MainActivity activity;
-        private EditText name1;
-        private EditText name2;
+        private final MainActivity  activity;
+        private final EditText name1;
+        private final EditText name2;
 
     public StartAction(MainActivity activity) {
         this.activity = activity;
@@ -31,6 +31,5 @@ public class StartAction implements View.OnClickListener {
         intent.putExtra("player1",player1);
         intent.putExtra("player2",player2);
         activity.startActivity(intent);
-        activity.finish();
     }
 }

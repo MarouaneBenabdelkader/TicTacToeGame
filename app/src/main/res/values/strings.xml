@@ -5,4 +5,8 @@
     <string name="playername2">Player 2  </string>
     <string name="btnstart">Start </string>
     <string name="nameply">Name :</string>
+    <string name="reset">RESET</string>
+    <string name="back_home">  BACK</string>
+    <string name="contentDescription">cross and circle container</string>
+    <string name="score">0</string>
 </resources>
